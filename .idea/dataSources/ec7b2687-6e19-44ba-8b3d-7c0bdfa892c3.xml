@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="postgres@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.7">
+    <root id="1"/>
+    <database id="2" parent="1" name="postgres">
+      <ObjectId>12445</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <database id="3" parent="1" name="itis_project">
+      <ObjectId>16454</ObjectId>
+    </database>
+    <database id="4" parent="1" name="school_app">
+      <ObjectId>17346</ObjectId>
+    </database>
+    <role id="5" parent="1" name="pg_signal_backend">
+      <ObjectId>4200</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="6" parent="1" name="postgres">
+      <ObjectId>10</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <Replication>1</Replication>
+      <ConnectionLimit>-1</ConnectionLimit>
+      <BypassRls>1</BypassRls>
+    </role>
+    <schema id="7" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <IntrospectionTimestamp>2018-07-11.16:51:53.466</IntrospectionTimestamp>
+      <IntrospectionStateNumber>1554</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="8" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+    </schema>
+    <schema id="9" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="10" parent="2" name="pg_temp_1">
+      <ObjectId>11848</ObjectId>
+    </schema>
+    <schema id="11" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11849</ObjectId>
+    </schema>
+    <schema id="12" parent="2" name="information_schema">
+      <ObjectId>12157</ObjectId>
+    </schema>
+    <sequence id="13" parent="7" name="customer_id_seq">
+      <ObjectId>16423</ObjectId>
+      <StateNumber>604</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <sequence id="14" parent="7" name="magazine_id_seq">
+      <ObjectId>16415</ObjectId>
+      <StateNumber>603</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <sequence id="15" parent="7" name="person_id_seq">
+      <ObjectId>25786</ObjectId>
+      <StateNumber>1359</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <sequence id="16" parent="7" name="place_id_seq">
+      <ObjectId>16395</ObjectId>
+      <StateNumber>600</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <sequence id="17" parent="7" name="postal_department_id_seq">
+      <ObjectId>16403</ObjectId>
+      <StateNumber>601</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <sequence id="18" parent="7" name="students_id_seq">
+      <ObjectId>16387</ObjectId>
+      <StateNumber>597</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <sequence id="19" parent="7" name="users_id_seq">
+      <ObjectId>17334</ObjectId>
+      <StateNumber>777</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <table id="20" parent="7" name="customer">
+      <ObjectId>16425</ObjectId>
+      <StateNumber>607</StateNumber>
+    </table>
+    <table id="21" parent="7" name="customer_magazine">
+      <ObjectId>16436</ObjectId>
+      <StateNumber>608</StateNumber>
+    </table>
+    <table id="22" parent="7" name="magazine">
+      <ObjectId>16417</ObjectId>
+      <StateNumber>608</StateNumber>
+    </table>
+    <table id="23" parent="7" name="person">
+      <ObjectId>25788</ObjectId>
+      <StateNumber>1359</StateNumber>
+    </table>
+    <table id="24" parent="7" name="place">
+      <ObjectId>16397</ObjectId>
+      <StateNumber>600</StateNumber>
+    </table>
+    <table id="25" parent="7" name="postal_department">
+      <ObjectId>16405</ObjectId>
+      <StateNumber>606</StateNumber>
+    </table>
+    <table id="26" parent="7" name="students">
+      <ObjectId>16384</ObjectId>
+      <StateNumber>597</StateNumber>
+    </table>
+    <table id="27" parent="7" name="users">
+      <ObjectId>17336</ObjectId>
+      <StateNumber>1550</StateNumber>
+    </table>
+    <routine id="28" parent="7" name="journal_students_info">
+      <ObjectId>16884</ObjectId>
+      <StateNumber>723</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ArgumentsDefinition>_journal_id integer</ArgumentsDefinition>
+      <ResultsDefinition>TABLE(student_name character varying, student_surname character varying, student_patronymic character varying, student_status character varying)</ResultsDefinition>
+      <LanguageName>plpgsql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <ConcurrencyKind>unsafe</ConcurrencyKind>
+      <ReturnsSet>1</ReturnsSet>
+      <Cost>100.0</Cost>
+      <Rows>1000.0</Rows>
+    </routine>
+    <routine id="29" parent="7" name="journal_subjects">
+      <ObjectId>16883</ObjectId>
+      <StateNumber>722</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ArgumentsDefinition>_study_date date, _group_name character varying</ArgumentsDefinition>
+      <ResultsDefinition>TABLE(journal_id integer, subject_name character varying)</ResultsDefinition>
+      <LanguageName>plpgsql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <ConcurrencyKind>unsafe</ConcurrencyKind>
+      <ReturnsSet>1</ReturnsSet>
+      <Cost>100.0</Cost>
+      <Rows>1000.0</Rows>
+    </routine>
+    <routine id="30" parent="7" name="rating_scores">
+      <ObjectId>16885</ObjectId>
+      <StateNumber>724</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ArgumentsDefinition>_student_id integer, _semester_number integer</ArgumentsDefinition>
+      <ResultsDefinition>TABLE(subject_name character varying, semester_score smallint, session_score smallint)</ResultsDefinition>
+      <LanguageName>plpgsql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <ConcurrencyKind>unsafe</ConcurrencyKind>
+      <ReturnsSet>1</ReturnsSet>
+      <Cost>100.0</Cost>
+      <Rows>1000.0</Rows>
+    </routine>
+    <column id="31" parent="20" name="name">
+      <Position>1</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>604</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="32" parent="20" name="id">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>604</StateNumber>
+      <DefaultExpression>nextval(&apos;customer_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>customer_id_seq</SequenceName>
+    </column>
+    <column id="33" parent="20" name="surname">
+      <Position>3</Position>
+      <DataType>varchar(30)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>604</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="34" parent="20" name="postal_department_id">
+      <Position>4</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>604</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="35" parent="20" name="customer_pkey">
+      <ObjectId>16429</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="36" parent="20" name="customer_pkey">
+      <ObjectId>16430</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>customer_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="37" parent="20" name="fk_postal_department">
+      <ObjectId>16431</ObjectId>
+      <ColNames>postal_department_id</ColNames>
+      <RefTableId>16405</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>postal_department</RefTableName>
+      <RefKeyName>postal_department_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="38" parent="20" name="fkku5vx03j5em47yt26536cwf1v">
+      <ObjectId>16439</ObjectId>
+      <ColNames>postal_department_id</ColNames>
+      <RefTableId>16405</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>postal_department</RefTableName>
+      <RefKeyName>postal_department_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="39" parent="21" name="customer_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>605</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="40" parent="21" name="magazine_id">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>605</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <foreign-key id="41" parent="21" name="fk1rtqd05c1dku3t2w3xbxd9ydf">
+      <ObjectId>16444</ObjectId>
+      <ColNames>customer_id</ColNames>
+      <RefTableId>16425</RefTableId>
+      <RefColPositions>2</RefColPositions>
+      <RefTableName>customer</RefTableName>
+      <RefKeyName>customer_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="42" parent="21" name="fkt8lkjv3t7agqjt9y56tegl3vq">
+      <ObjectId>16449</ObjectId>
+      <ColNames>magazine_id</ColNames>
+      <RefTableId>16417</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>magazine</RefTableName>
+      <RefKeyName>magazine_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="43" parent="22" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>603</StateNumber>
+      <DefaultExpression>nextval(&apos;magazine_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>magazine_id_seq</SequenceName>
+    </column>
+    <column id="44" parent="22" name="name">
+      <Position>2</Position>
+      <DataType>varchar(30)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>603</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="45" parent="22" name="magazine_pkey">
+      <ObjectId>16421</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="46" parent="22" name="magazine_pkey">
+      <ObjectId>16422</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>magazine_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="47" parent="23" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1359</StateNumber>
+      <DefaultExpression>nextval(&apos;person_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>person_id_seq</SequenceName>
+    </column>
+    <column id="48" parent="23" name="name">
+      <Position>2</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1359</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="49" parent="23" name="surname">
+      <Position>3</Position>
+      <DataType>varchar(30)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1359</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="50" parent="23" name="person_pkey">
+      <ObjectId>25792</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="51" parent="23" name="person_pkey">
+      <ObjectId>25793</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>person_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="52" parent="24" name="name">
+      <Position>1</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>600</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="53" parent="24" name="id">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>600</StateNumber>
+      <DefaultExpression>nextval(&apos;place_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>place_id_seq</SequenceName>
+    </column>
+    <column id="54" parent="24" name="longitude">
+      <Position>3</Position>
+      <DataType>varchar(10)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>600</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="55" parent="24" name="latitude">
+      <Position>4</Position>
+      <DataType>varchar(10)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>600</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="56" parent="24" name="place_pkey">
+      <ObjectId>16401</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="57" parent="24" name="place_pkey">
+      <ObjectId>16402</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>place_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="58" parent="25" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>601</StateNumber>
+      <DefaultExpression>nextval(&apos;postal_department_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>postal_department_id_seq</SequenceName>
+    </column>
+    <column id="59" parent="25" name="index">
+      <Position>2</Position>
+      <DataType>varchar(6)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>601</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="60" parent="25" name="address">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>601</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <index id="61" parent="25" name="postal_department_pkey">
+      <ObjectId>16412</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="62" parent="25" name="postal_department_index_uindex">
+      <ObjectId>16414</ObjectId>
+      <ColNames>index</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="63" parent="25" name="postal_department_pkey">
+      <ObjectId>16413</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>postal_department_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="64" parent="26" name="name">
+      <Position>1</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>595</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="65" parent="26" name="surname">
+      <Position>2</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>596</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="66" parent="26" name="id">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>597</StateNumber>
+      <DefaultExpression>nextval(&apos;students_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>students_id_seq</SequenceName>
+    </column>
+    <index id="67" parent="26" name="students_id_pk">
+      <ObjectId>16393</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="68" parent="26" name="students_id_pk">
+      <ObjectId>16394</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>students_id_pk</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="69" parent="27" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>777</StateNumber>
+      <DefaultExpression>nextval(&apos;users_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>users_id_seq</SequenceName>
+    </column>
+    <column id="70" parent="27" name="login">
+      <Position>2</Position>
+      <DataType>varchar(12)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>777</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="71" parent="27" name="hashed_password">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>782</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <index id="72" parent="27" name="users_pkey">
+      <ObjectId>17343</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="73" parent="27" name="users_login_uindex">
+      <ObjectId>17345</ObjectId>
+      <ColNames>login</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="74" parent="27" name="users_pkey">
+      <ObjectId>17344</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>users_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <argument id="75" parent="28" name="_journal_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+    </argument>
+    <argument id="76" parent="28">
+      <ArgumentDirection>T</ArgumentDirection>
+      <DataType>table(student_name varchar, student_surname varchar, student_patronymic varchar, student_status varchar)|0v</DataType>
+    </argument>
+    <argument id="77" parent="29" name="_study_date">
+      <Position>1</Position>
+      <DataType>date|0s</DataType>
+    </argument>
+    <argument id="78" parent="29" name="_group_name">
+      <Position>2</Position>
+      <DataType>varchar|0s</DataType>
+    </argument>
+    <argument id="79" parent="29">
+      <ArgumentDirection>T</ArgumentDirection>
+      <DataType>table(journal_id integer, subject_name varchar)|0v</DataType>
+    </argument>
+    <argument id="80" parent="30" name="_student_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+    </argument>
+    <argument id="81" parent="30" name="_semester_number">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+    </argument>
+    <argument id="82" parent="30">
+      <ArgumentDirection>T</ArgumentDirection>
+      <DataType>table(subject_name varchar, semester_score smallint, session_score smallint)|0v</DataType>
+    </argument>
+  </database-model>
+</dataSource>
